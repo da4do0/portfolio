@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+html, body{
+    height: 100vh;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #01308B;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 13px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    background: linear-gradient(rgba(8, 0, 91, 0.46), #01308B);
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.box-social{
+    position: absolute;
+    top: 27%;
+    left: 75%;
+    transform: translate(-25%, -73%);
+    aspect-ratio: 1/1;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.social{
+    background-color: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social img{
+    height: 24px;
+    width: 24px;
+
+}
+
+#memoji{
+    height: 256px;
+    width: 256px;
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    transform: translate(-25%, -75%);
+}
+
+.name-text{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    top: 70%;
+    transform: translate(-30%, -55%);
+}
+
+.name-text p{
+    color: rgb(255, 255, 255);
+    margin: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.name-text p span{
+    margin-top: 0%;
+    margin-left: 0%;
+    display: block;
+}
+
+.name-text #desc{
+    color: white;
+    font-weight:lighter;
+    font-size: 14px;
+}
+
+.name-text #desc #dream{
+    font-weight:400;
+}
+
+.name-text #desc #second-row{
+    display: block;
+}
+
+.info{
+    height: 90px;
+    width: 100%;
+    bottom: 0%;
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info p{
+    color: white;
+    font-weight:normal;
+}
+
+.info p span{
+    display: block;
+}
+
+@media (min-width: 930px){
+
+    .box-social{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        aspect-ratio: 1/1;
+        width: 550px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        z-index: 2;
+    }
+
+    #memoji{
+        height: 512px;
+        width: 512px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+    }
+    .name-text{
+        width: 300px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translateY(-45%);
+    }
+    .name-text p span{
+        margin-top: 0%;
+        margin-left: 30%;
+        display: block;
+    }
+
+    .info{
+        width: 90px;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        transform: translateX(-100%);
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social{
+        aspect-ratio: 1/1;
+        width: 60px;
+    }
+    .social img{
+        height: 48px;
+        width: 48px;
+    
+    }
+}

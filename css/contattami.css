@@ -1,0 +1,105 @@
+
+/****form-contattami******/
+
+.horizontal-perfect{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.central-perfect{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -55%);
+}
+
+form{
+    background-color: #11162f60;
+    box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.19);
+    border-radius: 10px;
+    aspect-ratio: 466/612;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input, textarea{margin: 10px 0px;}
+
+input, textarea:focus{outline: none;}
+
+input{
+    background-color: #11162f00;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: none;
+    width: 80%;
+}
+
+input[type="email"]{
+    top: 15%;
+}
+input[type="text"]{
+    top: 25%;
+}
+
+input::placeholder{
+    color: white;
+}
+
+textarea{
+    background-color: #012f8b00;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+button{
+    background-color: #012f8b00;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    bottom: 10%;
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (min-width:1023px) {
+    form{
+        width: 466px;
+        height: 612px;
+    }
+
+    h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    input[type="email"]{
+        top: 15%;
+    }
+    input[type="text"]{
+        top: 22%;
+    }
+
+    .central-perfect{
+        position: absolute;
+        left: 50%;
+        top: 37%;
+        transform: translate(-50%, -63%);
+    }
+}
