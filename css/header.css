@@ -26,7 +26,6 @@ img{
 .header{
     background: linear-gradient(rgba(8, 0, 91, 0.46), #01308B);
     position: relative;
-    width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -35,12 +34,40 @@ img{
     align-items: center;
 }
 
+.header a{
+    font-size: 10px;
+}
+
 .header a #memoji{
     width: 100%;
     height: 100%;
 }
 
 #image{
-    width: 80px;
-    height: 80px;
+    aspect-ratio: 1/1;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (min-width: 481px){
+    .header a{
+        font-size: 13px;
+    }
+}
+@media (min-width: 769px){
+    #image{
+        aspect-ratio: 1/1;
+        width: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .header a{
+        font-size: 16px;
+    }
 }

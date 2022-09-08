@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
-html, body{
+body{
     height: 100vh;
 }
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+
 body{
     background-color: #01308B;
     margin: 0;
@@ -27,34 +29,38 @@ img{
 
 .header{
     background: linear-gradient(rgba(8, 0, 91, 0.46), #01308B);
-    position: relative;
-    width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
-    align-content: center;
     justify-content: center;
     align-items: center;
 }
 
+.header a{
+    font-size: 10px;
+}
+
 .box{
     position: relative;
-    width: 50%;
-    height: 100%;
+    height: 50%;
+}
+#memoji{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    height: 256px;
+    width: 256px;
 }
 
 .box-social{
-    position: absolute;
-    top: 27%;
-    left: 75%;
-    transform: translate(-25%, -73%);
-    aspect-ratio: 1/1;
-    width: 320px;
+    position: relative;
+    margin-top: 250px;
+    height: 20%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-evenly;
     z-index: 2;
 }
 
@@ -76,22 +82,12 @@ img{
 
 }
 
-#memoji{
-    height: 256px;
-    width: 256px;
-    position: absolute;
-    top: 25%;
-    left: 75%;
-    transform: translate(-25%, -75%);
-}
 
 .name-text{
-    width: 300px;
     height: auto;
-    position: absolute;
-    left: 45%;
-    top: 70%;
-    transform: translate(-30%, -55%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .name-text p{
@@ -99,6 +95,9 @@ img{
     margin: none;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .name-text p span{
@@ -107,18 +106,14 @@ img{
     display: block;
 }
 
-.name-text #desc{
+.name-text #desc,
+.name-text #dream{
     color: white;
-    font-weight:lighter;
-    font-size: 14px;
+    font-weight: lighter;
 }
 
 .name-text #desc #dream{
     font-weight:400;
-}
-
-.name-text #desc #second-row{
-    display: block;
 }
 
 .info{
@@ -141,26 +136,42 @@ img{
     display: block;
 }
 
-@media (min-width: 930px){
-
-    .box-social{
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -55%);
-        aspect-ratio: 1/1;
-        width: 550px;
+@media (min-width: 768px) {
+    .container{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        z-index: 2;
+        align-items: center;
+        align-content: center;
+        margin-top: 10%;
+    }
+    .box{
+        width: 50%;
+    }
+
+    .name-text{
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .name-text p{
+        text-align: left;
     }
 
     #memoji{
-        height: 512px;
-        width: 512px;
+        bottom: 10%;
+    }
+}
+
+@media (min-width: 1440px){
+
+    #memoji{
+        height: 350px;
+        width: 350px;
         position: absolute;
         top: 45%;
         left: 50%;
@@ -169,9 +180,6 @@ img{
     .name-text{
         width: 300px;
         height: auto;
-        position: absolute;
-        left: 50%;
-        top: 55%;
         transform: translateY(-45%);
     }
     .name-text p span{
@@ -191,6 +199,23 @@ img{
         flex-direction: column;
         align-items: center;
     }
+
+    .container{
+        margin-top: 0%;
+        height: 80%;
+    }
+
+    .box{
+        height: 70%;
+    }
+
+    .box-social{
+        position: absolute;
+        left: 50%;
+        width: 70%;
+        transform: translateX(-50%);
+        margin-top: 40%;
+    }
     .social{
         aspect-ratio: 1/1;
         width: 60px;
@@ -199,5 +224,9 @@ img{
         height: 48px;
         width: 48px;
     
+    }
+
+    .header a{
+        font-size: 15px;
     }
 }

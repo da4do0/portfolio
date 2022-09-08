@@ -1,6 +1,11 @@
 
 /********card*********/
 
+/* .box-groupCard,
+   .box-groupCard *{
+        border: 1px solid red;
+    }  */
+
 .box-groupCard{
     position: absolute;
     left: 50%;
@@ -12,14 +17,15 @@
 }
 
 .box-card{
-    width: 230px;
-    height: 259px;
+    aspect-ratio: 3/3.5;
+    width: 210px;
     background-color: rgba(17, 22, 47, 0.6);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    flex-wrap: wrap;
     margin: 5px 0px;
 }
 
@@ -37,10 +43,9 @@
 }
 
 .infobox{
-    max-width: 90%;
-    max-height: 50%;
-    min-width: 90%;
-    min-height: 50%;
+    width: 90%;
+    height: 40%;
+    margin-top: 5px;
 }
 
 .infobox p{
@@ -66,4 +71,19 @@
         flex-direction: row;
         justify-content: center;
     }
+}
+
+@media (min-width: 481px){
+    /* .box-groupCard,
+    .box-groupCard *{
+        border: 1px solid red;
+    } */
+
+    .box-groupCard{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
 }
